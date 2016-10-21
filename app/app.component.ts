@@ -21,6 +21,7 @@ import { Meal } from './meal.model';
 
   <edit-meal
     [mealToEdit]="selectedMeal"
+    (doneClickedSender)="finishedEditing()"
   ></edit-meal>
   `
 })
@@ -41,6 +42,10 @@ export class AppComponent {
 
   setMealToEdit(mealToEdit){
     this.selectedMeal = mealToEdit;
+  }
+
+  finishedEditing(){
+    this.selectedMeal = null;
   }
 
 

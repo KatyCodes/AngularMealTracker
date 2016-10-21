@@ -28,4 +28,9 @@ import { Meal } from './meal.model';
 
   export class EditMealComponent {
     @Input() mealToEdit: Meal;
+    @Output() doneClickedSender = new EventEmitter();
+
+    doneClicked(){
+      this.doneClickedSender.emit();
+    }
 }
