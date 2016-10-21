@@ -6,6 +6,7 @@ import { Meal } from './meal.model';
   selector: 'meal-input',
   template: `
   <div class="well">
+    <h2>Enter a new meal:</h2>
     <label>Enter food name:</label>
     <input #name>
 

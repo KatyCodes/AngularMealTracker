@@ -13,6 +13,11 @@ import { Meal } from './meal.model';
     (newMealClickedSender)="addMeal($event)"
   ></meal-input>
 
+  <sort-meal
+    (sortSender)="updateSortDisplay($event)"
+
+  ></sort-meal>
+
   <display-meals
     [childMealList]="masterMealList"
     [childSortList]="sortDisplay"
@@ -24,11 +29,6 @@ import { Meal } from './meal.model';
     [mealToEdit]="selectedMeal"
     (doneClickedSender)="finishedEditing()"
   ></edit-meal>
-
-  <sort-meal
-    (sortSender)="updateSortDisplay($event)"
-
-  ></sort-meal>
   `
 })
 

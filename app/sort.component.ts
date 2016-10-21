@@ -5,11 +5,14 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'sort-meal',
   template: `
+  <div class="container">
+  <label>Sort by calories:</label>
     <select id="calorieSearch" (change)="onChange($event.target.value)" class='form'>
       <option value='all'>All</option>
       <option value='over500'>Meals with more than 500 Calories</option>
       <option value='under500'>Meals less than 500 Calories</option>
     </select>
+  </div>
    `
 })
 
