@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, EventEmitter, Output} from '@angular/core';
 import { Meal } from './meal.model';
 
 
@@ -6,10 +6,10 @@ import { Meal } from './meal.model';
   selector: 'display-meals',
   template: `
   <div *ngFor="let meal of childMealList" class="container">
-
-    <h3>{{meal.name}}</h3>
-    <h4>{{meal.details}}</h4>
-    <h4>caloric Intake:{{meal.calories}}</h4>
+    <h2>{{meal.name}}</h2>
+    <h4>caloric Intake:<em> {{meal.calories}}</em></h4>
+    <h5>{{meal.details}}</h5>
+    <button (click)="editClicked(meal)" class='btn'>Edit</button>
 
   </div>
   `
@@ -17,4 +17,9 @@ import { Meal } from './meal.model';
 
 export class DisplayComponent {
   @Input() childMealList: Meal[];
+  @Output() mealEditSender = new EventEmitter();
+
+  editClicked(mealToEdit){
+    this.mealEditSender.emit(mealToEdit);
+  };
 }

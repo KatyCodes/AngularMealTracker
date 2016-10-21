@@ -8,12 +8,20 @@ import { Meal } from './meal.model';
   <div class="jumbotron">
     <h1>Meal Tracker</h1>
   </div>
+
   <meal-input
     (newMealClickedSender)="addMeal($event)"
   ></meal-input>
+
   <display-meals
     [childMealList]="masterMealList"
+    (mealEditSender)="setMealToEdit($event)"
+
   ></display-meals>
+
+  <edit-meal
+    [mealToEdit]="selectedMeal"
+  ></edit-meal>
   `
 })
 
@@ -24,8 +32,15 @@ export class AppComponent {
     new Meal ("Mac n Cheese", "Finished the whole thing", 3600)
   ];
 
+  public selectedMeal: Meal = null;
+
+
   addMeal(newMeal) {
     this.masterMealList.push(newMeal);
+  }
+
+  setMealToEdit(mealToEdit){
+    this.selectedMeal = mealToEdit;
   }
 
 

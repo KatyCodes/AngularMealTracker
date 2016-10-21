@@ -22,9 +22,9 @@ import { Meal } from './meal.model';
 
 export class MealInputComponent {
   @Output() newMealClickedSender = new EventEmitter();
-    newMealClicked(name: string, details: string, calories: number){
-      var calories = parseInt(calories);
-      var newMeal = new Meal(name, details, calories);
+    newMealClicked(name: string, details: string, calories: string){
+      var cal = parseInt(calories);
+      var newMeal = new Meal(name, details, cal);
       this.newMealClickedSender.emit(newMeal);
     }
 }
