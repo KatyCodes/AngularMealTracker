@@ -4,9 +4,13 @@ import { AppComponent }   from './app.component';
 import { MealInputComponent } from './meal-input.component';
 import { DisplayComponent } from './display.component'
 import { EditMealComponent } from './edit-meal.component'
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
   declarations: [
     AppComponent,
     MealInputComponent,
