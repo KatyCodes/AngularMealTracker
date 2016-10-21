@@ -5,6 +5,8 @@ import { MealInputComponent } from './meal-input.component';
 import { DisplayComponent } from './display.component'
 import { EditMealComponent } from './edit-meal.component'
 import { FormsModule }   from '@angular/forms';
+import { SortPipe } from './sort.pipe';
+import { SortMealComponent } from './sort.component'
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import { FormsModule }   from '@angular/forms';
     AppComponent,
     MealInputComponent,
     DisplayComponent,
-    EditMealComponent
+    EditMealComponent,
+    SortPipe,
+    SortMealComponent
   ],
   bootstrap:    [ AppComponent ]
 })
