@@ -13,7 +13,7 @@ export class SortPipe implements PipeTransform {
     }
    else if (sort === 'over500') {
       for(var i = 0; i < input.length; i++) {
-        if(input[i].calories > 500) {
+        if(input[i].calories >= 500) {
           output.push(input[i]);
         }
       }
