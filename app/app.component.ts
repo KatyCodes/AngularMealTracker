@@ -7,7 +7,7 @@ import { Meal } from './meal.model';
   template: `
   <div class="jumbotron">
     <h1>Meal Tracker</h1>
-    <h4>Because no good story starts with a salad</h4>
+    <h4>A great way to track and sort your meals to help maintain a healthy diet.</h4>
   </div>
 
   <meal-input
