@@ -7,6 +7,7 @@ import { Meal } from './meal.model';
   template: `
   <div class="jumbotron">
     <h1>Meal Tracker</h1>
+    <h4>Because no good story starts with a salad</h4>
   </div>
 
   <meal-input
@@ -15,14 +16,12 @@ import { Meal } from './meal.model';
 
   <sort-meal
     (sortSender)="updateSortDisplay($event)"
-
   ></sort-meal>
 
   <display-meals
     [childMealList]="masterMealList"
     [childSortList]="sortDisplay"
     (mealEditSender)="setMealToEdit($event)"
-
   ></display-meals>
 
   <edit-meal
