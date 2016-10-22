@@ -9,7 +9,7 @@ import { Meal } from './meal.model';
   <label>Sort by calories:</label>
     <select id="calorieSearch" (change)="onChange($event.target.value)" class='form'>
       <option value='all'>All</option>
-      <option value='over500'>Meals with more than 500 Calories</option>
+      <option value='over500'>Meals with 500 Calories or more</option>
       <option value='under500'>Meals less than 500 Calories</option>
     </select>
   </div>
